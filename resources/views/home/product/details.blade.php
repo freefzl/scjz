@@ -225,6 +225,10 @@
 <script src="/web/js/layer.js"></script>
 <script src="/web/js/goods.js"></script>
 <script>
+    var host = '{{env('DOMAIN')}}';
+    if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+        window.location.href = "http://m."+host;
+    }
     {!! $site['statistical_code'] !!}
 </script>
 </body>

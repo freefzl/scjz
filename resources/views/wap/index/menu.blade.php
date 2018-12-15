@@ -105,6 +105,12 @@
 					//菜单tab切换
 				})
 			})
+            var host = '{{env('DOMAIN')}}';
+            if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+
+            }else{
+                window.location.href = "http://www."+host;
+            }
 			{!! $site['statistical_code'] !!}
 		</script>
 

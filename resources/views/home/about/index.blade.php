@@ -112,6 +112,10 @@
 	.comp2, .comp3, .comp4, .comp5, .comp6{display: none}
 </style>
 <script>
+    var host = '{{env('DOMAIN')}}';
+    if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+        window.location.href = "http://m."+host;
+    }
 	{!! $site['statistical_code'] !!}
 
 

@@ -203,7 +203,10 @@
 </footer>
 <!--底部 end-->
 <script>
-
+    var host = '{{env('DOMAIN')}}';
+    if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+        window.location.href = "http://m."+host;
+    }
 	function getData(obj,id) {
 	    var img_url = '{{env('IMG_URL')}}';
 
