@@ -1,0 +1,116 @@
+﻿
+button {
+	outline: none;
+	border: none;
+	font-family: "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	background-color: white;
+}
+input[type=submit], input[type=reset], input[type=button], button {
+	-webkit-appearance: none;
+}
+select,input,img,select {
+	vertical-align:middle;
+}
+a,button,input,textarea {
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+	-webkit-appearance:none !important;
+}
+*:focus {
+	outline: none;
+}
+input{
+	outline: none;
+}
+.clear:after,.clearfix:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+.dib{
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+	vertical-align: middle;
+}
+.db{
+	display: block;
+}
+.btnh:hover{
+	filter:alpha(opacity=90);
+	-moz-opacity:0.9;
+	-khtml-opacity: 0.9;
+	box-shadow: 1px 1px 10px 2px #fd7d22;
+}
+.opacity0{
+	filter:alpha(opacity=0);
+	-moz-opacity:0;
+	-khtml-opacity: 0;
+	opacity: 0;
+}
+.scale-piece{
+	-webkit-transform: scale(1.1);
+	-moz-transform: scale(1.1);
+	-ms-transform: scale(1.1);
+	transform: scale(1.1);
+}
+.text-overflow{
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+.text-overflow2{
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	word-break: break-all;
+}
+.text-overflow3{
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 3;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	word-break: break-all;
+}
+.transition-05{
+	-moz-transition: all 0.5s ease-in-out;
+	-webkit-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
+}
+.page-content{
+	width: 100%;
+	min-width: 1190px;
+	background-color: #f5f5f5;
+	padding-bottom: 25px;
+}
+.page-piece{
+	width: 100%;
+	min-width: 1190px;
+}
+.page-inner-piece{
+	width: 1200px;
+	margin: 0 auto;
+}
+*, :after, :before,
+ input[type=checkbox],input[type=radio],
+ input[type=search]{
+	 box-sizing: content-box;
+ }
+.w1200{
+	width:1200px;
+	margin:auto;
+}
+.lf,.fl{
+	float:left;
+	display:inline;
+}
+.rg{
+	float:right;
+	display:inline;
+}
+.mt20{margin-top: 20px}
