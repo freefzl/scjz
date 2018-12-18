@@ -10,6 +10,12 @@
     <link href="/web/css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="/web/css/all-sever.css"/>
     <link rel="stylesheet" href="/web/css/main_1.css"/>
+    <script>
+        var host = '{{env('DOMAIN')}}';
+        if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+            window.location.href = "http://m."+host;
+        }
+    </script>
 </head>
 <body>
 <!--导航-->
@@ -225,10 +231,8 @@
 <script src="/web/js/layer.js"></script>
 <script src="/web/js/goods.js"></script>
 <script>
-    var host = '{{env('DOMAIN')}}';
-    if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
-        window.location.href = "http://m."+host;
-    }
+
+
     {!! $site['statistical_code'] !!}
 </script>
 </body>

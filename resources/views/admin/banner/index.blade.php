@@ -67,10 +67,12 @@
                         {checkbox: true,fixed: true}
                         ,{field: 'id', title: 'ID', sort: true,width:80}
                         ,{field: 'type', title: '图片类型',templet:function (d) {
-                                if(d.type === 1){
+                                if(d.type == '1'){
                                     return '幻灯片图'
-                                }else if(d.type === 2){
+                                }else if(d.type == '2'){
                                     return '左边悬浮图'
+                                }else if(d.type == '3'){
+                                    return 'wap幻灯片'
                                 }
                             }}
                         ,{field: 'banner', title: 'banner图片',toolbar:'#banner'}

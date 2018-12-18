@@ -19,7 +19,7 @@ class IndexController extends Controller
     {
         $site = Site::first()->toArray();
 
-        $banner = Banner::where(['type'=>1])->orderBy('id','desc')->limit(4)->get()->toArray();
+        $banner = Banner::where(['type'=>3])->orderBy('id','desc')->limit(4)->get()->toArray();
 
         $answer = Answer::orderBy('id','desc')->limit(2)->get()->toArray();
 

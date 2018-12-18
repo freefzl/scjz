@@ -5,6 +5,7 @@
     <div class="layui-input-block">
         <input type="radio" name="type" value="1" title="幻灯片" checked>
         <input type="radio" name="type" value="2" title="左边悬浮图">
+        <input type="radio" name="type" value="3" title="wap端幻灯片">
     </div>
 </div>
 <div class="layui-form-item">

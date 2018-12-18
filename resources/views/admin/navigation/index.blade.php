@@ -59,9 +59,9 @@
                         {checkbox: true,fixed: true}
                         ,{field: 'id', title: 'ID', sort: true,width:80}
                         ,{field: 'type', title: '导航位置',templet:function (d) {
-                                if(d.type === 1){
+                                if(d.type == '1'){
                                     return '顶部导航'
-                                }else if(d.type===2){
+                                }else if(d.type=='2'){
                                     return '尾部导航'
                                 }
                             }}

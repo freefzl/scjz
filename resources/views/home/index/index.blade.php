@@ -13,6 +13,12 @@
 		<script type="text/javascript" src="web/js/jquery.num.js"></script>
 		<script src="web/js/superslide.js"></script>
 		<script>
+            var host = '{{env('DOMAIN')}}';
+            if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+                window.location.href = "http://m."+host;
+            }
+		</script>
+		<script>
 			$(function() {
 				$(".eight-advantage-cont").slide({
 					mainCell: ".slideHot ul",
@@ -591,10 +597,8 @@
 <!--底部end-->
 
 <script>
-    var host = '{{env('DOMAIN')}}';
-    if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
-        window.location.href = "http://m."+host;
-    }
+
+
 $(document).ready(function () {
       setTimeout(function () {
             $("#btm_fl").slideDown(1000)

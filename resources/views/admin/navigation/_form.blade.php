@@ -3,8 +3,8 @@
 <div class="layui-form-item">
     <label for="" class="layui-form-label">跳转链接</label>
     <div class="layui-input-block">
-        <input type="radio" name="type" value="1" title="顶部导航" checked>
-        <input type="radio" name="type" value="2" title="尾部导航">
+        <input type="radio" name="type" value="1" title="顶部导航" @if(empty($nav))checked @endif  {{!empty($nav)&&$nav->type==1?'checked':''}} >
+        <input type="radio" name="type" value="2" title="尾部导航" {{!empty($nav)&& $nav->type==2?'checked':''}}>
     </div>
 </div>
 <div class="layui-form-item">

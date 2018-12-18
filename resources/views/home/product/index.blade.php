@@ -10,6 +10,12 @@
 	<link rel="stylesheet" href="web/css/all-sever.css"/>
 	<script type="text/javascript" src="web/js/jquery.js"></script>
 </head>
+<script>
+    var host = '{{env('DOMAIN')}}';
+    if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+        window.location.href = "http://m."+host;
+    }
+</script>
 <body>
 <!--导航-->
 <div class="wl100">
@@ -203,10 +209,8 @@
 </footer>
 <!--底部 end-->
 <script>
-    var host = '{{env('DOMAIN')}}';
-    if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
-        window.location.href = "http://m."+host;
-    }
+
+
 	function getData(obj,id) {
 	    var img_url = '{{env('IMG_URL')}}';
 
