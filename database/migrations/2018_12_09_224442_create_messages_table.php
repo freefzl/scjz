@@ -18,6 +18,8 @@ class CreateMessagesTable extends Migration
             $table->string('phone')->nullable()->comment('电话');
             $table->string('status')->default(0)->comment('状态');
             $table->string('name')->nullable()->comment('姓名');
+            $table->string('appointment')->nullable()->comment('预约');
+            $table->string('visit_time')->nullable()->comment('回访时间');
             $table->timestamps();
         });
     }

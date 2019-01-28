@@ -56,7 +56,15 @@
                         ,{field: 'id', title: 'ID', sort: true,width:80}
                         ,{field: 'name', title: '姓名'}
                         ,{field: 'phone', title: '留言电话号码'}
-                        // ,{field: 'status', title: '状态'}
+                        ,{field: 'appointment', title: '预约办理业务'}
+                        ,{field: 'visit_time', title: '选择回访时间'}
+                        ,{field: 'status', title: '状态',templet:function (d) {
+                                if(d.status == 0){
+                                    return '未回访'
+                                }else if(d.status == 1){
+                                    return '已回访'
+                                }
+                            }}
                         ,{fixed: 'right', width: 220, align:'center', toolbar: '#options'}
                     ]]
                 });

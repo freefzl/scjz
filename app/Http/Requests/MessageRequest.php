@@ -29,6 +29,7 @@ class MessageRequest extends FormRequest
                 {
                     return [
                         'phone'   => 'required|numeric|regex:/^1[3456789][0-9]{9}$/',
+                        'code'   => 'required|captcha',
                     ];
                 }
             // UPDATE
@@ -49,6 +50,8 @@ class MessageRequest extends FormRequest
             'phone.required' => '手机号不能为空。',
             'phone.numeric' => '手机号不符合要求。',
             'phone.regex' => '手机号不符合要求。',
+            'code.required' => '验证码不能为空。',
+            'code.captcha' => '验证码错误。',
         ];
     }
 

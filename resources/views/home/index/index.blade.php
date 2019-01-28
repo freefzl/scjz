@@ -43,7 +43,10 @@
 					$("#ad").fadeIn()
 				}, 1000);
 			})
+
+			{!! $site['leyu'] !!}
 		</script>
+
 	</head>
 
 	<body>
@@ -53,6 +56,27 @@
 			<a href="{{$banner1['url']}}"><img src="{{ env('IMG_URL').$banner1['banner'] }}"></a> <span id="ad-close"><img src="web/img/index-ad-close.png"></span> </div>
 			@endif
 		<!--悬浮广告 end-->
+				<!--悬浮导航-->
+		{{--<div id="right-menu">
+			<ul>
+				<li>
+					<a href="">资质新办</a>
+				</li>
+				<li>
+					<a href="">资质升级</a>
+				</li>
+				<li>
+					<a href="">资质增项</a>
+				</li>
+				<li>
+					<a href="">资质购买</a>
+				</li>
+				<li>
+					<a href="">资质转让</a>
+				</li>
+			</ul>
+		</div>--}}
+		<!--悬浮导航 end-->
 		<!--顶部-->
 		<div class="wl100" id="top">
 			<div class="content"><i><img src="web/img/hi.png"> </i>{{ $site['hello'] }}
@@ -141,9 +165,14 @@
 						<ul>
 							@foreach($value['product'] as $v)
 							<li>
-								<a href="/details/{{$v['id']}}">{{$v['tag']}}</a>
+								{{--<a href="/details/{{$v['id']}}">{{$v['tag']}}</a>--}}
+								<a href="/product">{{$v['tag']}}</a>
 							</li>
+
 							@endforeach
+								<li>
+									<a href="/product">更多热门服务</a>
+								</li>
 						</ul>
 					</div>
 					@endforeach
@@ -437,7 +466,7 @@
 				</div>--}}
 				<!-咨询电话通用-->
 				<div class="telpne">
-					<a>{{$site['mobile']}}</a>
+					<a >{{$site['mobile']}}</a>
 				</div>
 				<!-咨询电话通用-->
 			</div>
@@ -509,12 +538,19 @@
 				<ul id="question">
 					@foreach($answer as $item)
 						<li><span><img src="web/img/question.png"> {{$item['question']}}</span>
-							<a href="/">立即咨询</a>
+							<a class="shangqiao" href="javascript:void(0);" rel="nofollow">立即咨询</a>
 						</li>
 					@endforeach
 
 				</ul>
 
+
+<!--大标-->
+<div class="title-h2">
+	<h2>成功案例<span>实力保证</span></h2><img src="web/img/title-line.png">
+	<p> SUCCESSFUL CASES, STRENGTH ASSURANCE</p>
+</div>
+<!--大标 end-->
 				<div class="big-gray">
 					<div class="eight-advantage-cont w1180">
 						<div class="slideHot">
@@ -598,6 +634,14 @@
 
 <script>
 
+	$(function(){
+		// 点击按钮时判断 百度商桥代码中的“我要咨询”按钮的元素是否存在，存在的话就执行一次点击事件
+		$(".shangqiao").click(function(event) {
+			if ($('#nb_invite_ok').length > 0) {
+				$('#nb_invite_ok').click();
+			}
+		});
+	});
 
 $(document).ready(function () {
       setTimeout(function () {

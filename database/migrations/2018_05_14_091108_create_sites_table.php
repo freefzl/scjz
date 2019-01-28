@@ -38,7 +38,8 @@ class CreateSitesTable extends Migration
             $table->string('title4')->nullable()->coment('合作机构');
             $table->string('copyright')->nullable()->coment('版权');
             $table->text('statistical_code')->nullable()->coment('统计代码');
-            $table->string('leyu')->nullable()->coment('乐语帐号');
+            $table->text('leyu')->nullable()->coment('百度商桥');
+            $table->string('leyu_url')->nullable()->coment('百度商桥独立沟通链接');
             $table->timestamps();
         });
     }

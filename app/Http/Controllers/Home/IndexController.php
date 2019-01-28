@@ -41,7 +41,7 @@ class IndexController extends BaseController
             $type[$k]['son'] = ProductType::where(['parent_id'=>$item['id']])->limit(3)->get()->toArray();
             $son_type = $type[$k]['son'];
             foreach ($son_type as $key=>$value){
-                $type[$k]['son'][$key]['product'] = Product::where(['type_id'=>$value['id']])->get()->toArray();
+                $type[$k]['son'][$key]['product'] = Product::where(['type_id'=>$value['id']])->limit(5)->get()->toArray();
             }
         }
 //        $products = Product::with([])->get()->toArray();
@@ -52,9 +52,13 @@ class IndexController extends BaseController
 
     public function getMobile(MessageRequest $request)
     {
+
+
         $data = $request->all();
+
         $is = Message::where(['phone'=>$data['phone']])->get();
-        if(!$is){
+//        dd(count($is));
+        if(!count($is)){
             $res = Message::create($data);
         }else{
             return response()->json(['code'=>1,'msg'=>'已经申请了！']);
@@ -66,6 +70,10 @@ class IndexController extends BaseController
             return response()->json(['code'=>1,'msg'=>'系统错误']);
         }
     }
+
+
+
+
 
 
 

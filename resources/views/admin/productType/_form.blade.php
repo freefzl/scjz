@@ -30,11 +30,11 @@
             <button type="button" class="layui-btn" id="uploadPic"><i class="layui-icon">&#xe67c;</i>图片上传</button>
             <div class="layui-upload-list" >
                 <ul id="layui-upload-box" class="layui-clear">
-                    @if(isset($aptitudeType->img))
-                        <li><img src="{{ env('IMG_URL').$aptitudeType->img }}" /><p>上传成功</p></li>
+                    @if(isset($productType->img))
+                        <li><img src="{{ env('IMG_URL').$productType->img }}" /><p>上传成功</p></li>
                     @endif
                 </ul>
-                <input type="hidden" name="img" id="thumb" value="{{ $aptitudeType->img??'' }}">
+                <input type="hidden" name="img" id="thumb" value="{{ $productType->img??'' }}">
             </div>
             <span>上传jpg,png,gif格式的图片</span>
         </div>

@@ -181,11 +181,10 @@ return [
         App\Providers\RouteServiceProvider::class,
 
         Spatie\Permission\PermissionServiceProvider::class,
-        zgldh\QiniuStorage\QiniuFilesystemServiceProvider::class,
-        Mews\Captcha\CaptchaServiceProvider::class,
         Yansongda\LaravelPay\PayServiceProvider::class,
         SimpleSoftwareIO\QrCode\QrCodeServiceProvider::class,
         Overtrue\LaravelUEditor\UEditorServiceProvider::class,
+        Mews\Captcha\CaptchaServiceProvider::class,
 
     ],
 
@@ -236,9 +235,10 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
 
-        'Captcha' => Mews\Captcha\Facades\Captcha::class,
+
         'Pay' => Yansongda\LaravelPay\Facades\Pay::class,
         'Debugbar' => Barryvdh\Debugbar\Facade::class,
+        'Captcha' => Mews\Captcha\Facades\Captcha::class,
 
     ],
 

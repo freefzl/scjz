@@ -167,6 +167,18 @@
                         <textarea class="layui-textarea" name="statistical_code" cols="30" rows="10">{{ $config['statistical_code']??'' }}</textarea>
                     </div>
                 </div>
+                <div class="layui-form-item">
+                    <label for="" class="layui-form-label mywidth">百度商桥</label>
+                    <div class="layui-input-block my_width">
+                        <textarea class="layui-textarea" name="leyu" cols="30" rows="10">{{ $config['leyu']??'' }}</textarea>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label for="" class="layui-form-label mywidth">百度商桥独立沟通链接</label>
+                    <div class="layui-input-block my_width">
+                        <input type="text" name="leyu_url" value="{{ $config['leyu_url']??'' }}" lay-verify="required" placeholder="百度商桥独立沟通链接" class="layui-input" >
+                    </div>
+                </div>
 
                 <div class="layui-form-item">
                     <div class="layui-input-block my_width">

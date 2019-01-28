@@ -52,16 +52,22 @@ footer ul li img{width: 16%;}
 .title-h2 h2{margin: 7vmin 0; line-height: 0; letter-spacing: 2px; font-weight: bolder;}
 .title-h2 span{color: #ff7f00}
 #zzfw li{width: 43.5%; float: left;border-bottom: #e3e3e3 solid 1px;border-right: #e3e3e3 solid 1px; padding: 3%; color: #838282;}
-#zzfw li img{width: 35%; float: left; margin-right: 2vmin;}
-#zzfw li p{margin: 1.5vmin 0 0 0; font-size: 3vmin;}
+#zzfw li img{width:29%; float: left; margin-right: 2vmin;}
+#zzfw li p{margin: 1.5vmin 0 0 0; font-size: 3vmin;ext-overflow: -o-ellipsis-lastline;
+overflow: hidden;
+text-overflow: ellipsis;
+display: -webkit-box;
+-webkit-line-clamp: 2; 
+-webkit-box-orient: vertical;}
 #zzfw li h5{margin: 0; color: #565656;}
+#zzfw li:nth-child(2),#zzfw li:nth-child(4){border-right: none;}
 #zzzs{padding: 5vmin 0;}
 #zzzs li{width:23.2%; float: left ; background:url(../images/list-bg01.png) no-repeat; color: #ffffff; text-align: center; background-size:100% ;margin-left:1.5%; font-size: 3.2vmin; padding: 3vmin 0 0 0;}
 #zzzs li img{width: 50%;}
 #zzzs li:nth-of-type(even){ background:url(../images/list-bg02.png) no-repeat;  background-size:100% ;}
 #zzzs button{background:url(../images/zx-btn.png) no-repeat; width: 80%; float: left; height: 9vmin; border-radius: 5px; border: none; color: #3295d3;background-size:100% ; margin: 3vmin 10%;}
 /*服务流程*/
-.in_lc{width: 100%; background: url(../images/standardization-step-bg.png) no-repeat 0 16vmin; margin: 5vmin 0; float: left; background-size:100% ;}
+.in_lc{width: 100%; background: url(../images/standardization-step-bg.png) no-repeat 0 12vmin; margin: 5vmin 0; float: left; background-size:100% ;}
 .in_lc li{width: 20%; float: left; text-align:center; color: #4e4c4c; font-size: 3.4vmin;}
 .in_lc li img{width: 60%;}
 .telpne{color: #787c7e; font-size: 5vmin;font-weight: bold;width: 65%;padding:2vmin 0 3.5vmin 5%;float: left; margin: 5vmin 15%;background: url(../images/telphone.png) no-repeat; background-size:100% ;}
@@ -108,8 +114,8 @@ footer ul li img{width: 16%;}
 
 .list-detailsimg{ width: 100%; height: auto; margin: 0 auto;}
 .list-detailsimg img{ width: 100%;}
-
-
+.list-detailsimg ul{width: 92%; margin: 4%; float: left;}
+.list-detailsimg ul p,.list-detailsimg ul b{color: #666666; font-size: 3.5vmin;}
 .list-evaluate-box{ width: 100%; background: #fff;}
 .list-evaluate-nr{ width: 92%; margin: 0 auto;}
 .list-evaluate-tit{ width: 100%; height: 8vmin; display: flex; justify-content: space-between;}

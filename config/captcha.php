@@ -1,30 +1,19 @@
 <?php
-/**
- * 使用示例
- * captcha_src();
- * Captcha::src();
- * captcha_img();
- * Captcha::img();
- * captcha_img('flat');
- * Captcha::img('inverse');
- * 验证
- * $this->validate($requrest,['captcha'=>'required|captcha'])
- */
+
 return [
 
     'characters' => '2346789abcdefghjmnpqrtuxyzABCDEFGHJMNPQRTUXYZ',
 
     'default'   => [
-        'length'    => 4,
+        'length'    => 9,
         'width'     => 120,
         'height'    => 36,
         'quality'   => 90,
-        'bgImage'   => false,
-        'fontColors'=> ['#2c3e50', '#c0392b', '#16a085', '#c0392b', '#8e44ad', '#303f9f', '#f57c00', '#795548'],
+        'math'      => true,
     ],
 
     'flat'   => [
-        'length'    => 4,
+        'length'    => 6,
         'width'     => 160,
         'height'    => 46,
         'quality'   => 90,
