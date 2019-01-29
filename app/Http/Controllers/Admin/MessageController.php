@@ -105,4 +105,23 @@ class MessageController extends Controller
         }
         return response()->json(['code'=>0,'msg'=>'删除成功']);
     }
+
+    public function status(Request $request,$id)
+    {
+//        dd($request->all(),$id);
+        $is_on = $request->is_on;
+
+//        dd($is_on);
+        if($is_on == 'false'){
+             Message::where(['id'=>$id])->update(['status'=>0]);
+
+        }elseif($is_on == 'true'){
+             Message::where(['id'=>$id])->update(['status'=>1]);
+
+        }
+
+
+        return response()->json(['code'=>0,'msg'=>'修改成功']);
+
+    }
 }

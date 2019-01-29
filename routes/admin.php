@@ -353,6 +353,7 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin', 'middleware' => ['aut
 
         Route::get('message/{id}/edit', 'MessageController@edit')->name('message.message.edit')->middleware('permission:message.message.edit');
         Route::put('message/{id}/update', 'MessageController@update')->name('message.message.update')->middleware('permission:message.message.edit');
+        Route::post('message/{id}/status', 'MessageController@status')->name('message.message.status');
         //删除
         Route::delete('message/destroy', 'MessageController@destroy')->name('message.message.destroy')->middleware('permission:message.message.destroy');
 

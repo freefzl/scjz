@@ -60,9 +60,9 @@
                         ,{field: 'visit_time', title: '选择回访时间'}
                         ,{field: 'status', title: '状态',templet:function (d) {
                                 if(d.status == 0){
-                                    return '未回访'
+                                    return '<input type="checkbox" name="zzz" lay-skin="switch" data-id="'+d.id+'" lay-filter="status" lay-text="已回访|未回访" >'
                                 }else if(d.status == 1){
-                                    return '已回访'
+                                    return '<input type="checkbox" name="zzz" lay-skin="switch" data-id="'+d.id+'" lay-filter="status" lay-text="已回访|未回访" checked>'
                                 }
                             }}
                         ,{fixed: 'right', width: 220, align:'center', toolbar: '#options'}
@@ -124,6 +124,26 @@
                         page:{curr:1}
                     })
                 })
+
+                form.on('switch(status)', function(data){
+                    // console.log(data.elem); //得到checkbox原始DOM对象
+                    // console.log(data.elem.checked); //开关是否开启，true或者false
+                    // console.log(data.value); //开关value值，也可以通过data.elem.value得到
+                    // console.log(data.othis); //得到美化后的DOM对象
+                    // console.log($(data.elem).data('id')); //得到美化后的DOM对象
+                    var id = $(data.elem).data('id');
+                    var is_on = data.elem.checked
+                    $.post("/admin/message/"+id+"/status",{_method:'post',is_on:is_on},function (result) {
+
+                        if (result.code==0){
+                            dataTable.reload()
+                            layer.msg(result.msg)
+
+                        }
+
+
+                    });
+                });
             })
         </script>
     @endcan
