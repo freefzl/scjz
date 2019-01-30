@@ -81,6 +81,8 @@
 		<div class="wl100" id="top">
 			<div class="content"><i><img src="web/img/hi.png"> </i>{{ $site['hello'] }}
 				<ul>
+					<li><a href="{{route('new')}}">公司新闻</a></li>
+					<li><a href="{{route('business')}}">行业百科</a></li>
 					<li><img src="web/img/weixin.png">{{$site['weixin']}}</li>
 					<li><img src="web/img/top-phone.png">{{ $site['about'] }}</li>
 					<li><img src="web/img/kefu.png"> {{ $site['service'] }}</li>

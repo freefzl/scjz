@@ -26,7 +26,8 @@ li{list-style: none}
 }
 #top{background: #282828; color: #ffffff; font-size: 12px; padding: 5px 0}
 #top  img{ vertical-align: middle; margin-right: 5px}
-#top ul{width: 280px; float: right; margin-top: 3px}
+#top ul{width: 500px; float: right; margin-top: 3px}
+#top ul a{color: #F8F8FF}
 #top li{float: left; margin-left: 25px}
 #top-right{width: 750px; float: right; }
 

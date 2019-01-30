@@ -9,6 +9,10 @@ Route::namespace('Home')->domain('www.'.env("DOMAIN"))->group(function () {
     Route::get('/product','ProductController@index')->name('product');
     Route::get('/details/{id}','ProductController@details')->name('details');
     Route::post('/getProduct','ProductController@getProduct')->name('getProduct');
+    Route::get('/new','ArticleController@index')->name('new');
+    Route::get('/business','ArticleController@business')->name('business');
+    Route::get('/content/{id?}','ArticleController@content')->name('content');
+    Route::get('/b_content/{id?}','ArticleController@b_content')->name('b_content');
 
 });
 
