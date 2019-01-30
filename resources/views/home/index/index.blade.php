@@ -625,7 +625,7 @@
             <input class="phonex6" id="phonex6" name="phone1" type="text" onKeyUp="this.value=this.value.replace(/\D/g,'')" maxlength="11" placeholder="请输入您的电话号码"
                    onFocus="this.value=''" onBlur="if(!value){value=defaultValue;}">
             <input value="免费咨询" type="button" id="bt7"   class="tijiaox6">
-            
+
 		</form>
         </div>
     </div>
@@ -699,7 +699,7 @@ $(document).ready(function () {
 
     });
 
-    
+
 });
 
 	{!! $site['statistical_code'] !!}

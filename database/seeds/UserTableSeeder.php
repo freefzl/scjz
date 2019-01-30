@@ -259,6 +259,26 @@ class UserTableSeeder extends Seeder
 
                 ]
             ]
+            ,[
+                'name' => 'article.manage',
+                'display_name' => '文章管理',
+                'route' => '',
+                'icon_id' => '13',
+                'child' => [
+                    [
+                        'name' => 'admin.article',
+                        'display_name' => '文章列表',
+                        'route' => 'admin.article',
+                        'icon_id' => '124',
+                        'child' => [
+                            ['name' => 'admin.article.create', 'display_name' => '添加文章','route'=>'article.create'],
+                            ['name' => 'admin.article.edit', 'display_name' => '编辑文章','route'=>'article.edit'],
+                            ['name' => 'admin.article.destroy', 'display_name' => '删除文章','route'=>'article.destroy'],
+                        ]
+                    ],
+
+                ]
+            ]
 
             ,[
                 'name' => 'about.manage',

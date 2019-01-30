@@ -379,6 +379,25 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin', 'middleware' => ['aut
 
 });
 
+//公司新闻
+Route::group(['namespace' => 'Admin', 'prefix' => 'admin', 'middleware' => ['auth', 'permission:article.manage']], function () {
+    //消息管理
+    Route::group(['middleware' => 'permission:admin.article'], function () {
+        Route::get('article/data', 'ArticleController@data')->name('admin.article.data');
+        Route::get('article', 'ArticleController@index')->name('admin.article');
+        //添加
+        Route::get('article/create', 'ArticleController@create')->name('admin.article.create')->middleware('permission:admin.article.create');
+        Route::post('article/store', 'ArticleController@store')->name('admin.article.store')->middleware('permission:admin.article.create');
+
+        Route::get('article/{id}/edit', 'ArticleController@edit')->name('admin.article.edit')->middleware('permission:admin.article.edit');
+        Route::put('article/{id}/update', 'ArticleController@update')->name('admin.article.update')->middleware('permission:admin.article.edit');
+        //删除
+        Route::delete('article/destroy', 'ArticleController@destroy')->name('admin.article.destroy')->middleware('permission:admin.article.destroy');
+
+    });
+
+});
+
 //关于我们
 Route::group(['namespace' => 'Admin', 'prefix' => 'admin', 'middleware' => ['auth', 'permission:about.manage']], function () {
     //公司简介

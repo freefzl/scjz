@@ -25,7 +25,7 @@ class IndexController extends BaseController
         $nav1 = $this->nav1();
         //幻灯片
         $banner = Banner::where(['type'=>1])->orderBy('id','desc')->limit(4)->get()->toArray();
-        $banner1 = Banner::where(['type'=>2])->limit(1)->first()->toArray();
+        $banner1 = Banner::where(['type'=>2])->limit(1)->first();
         //流程化
         $process = Process::orderBy('sort','desc')->orderBy('id','asc')->limit(5)->get()->toArray();
         //知道

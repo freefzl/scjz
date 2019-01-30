@@ -3,9 +3,9 @@
 <div class="layui-form-item">
     <label for="" class="layui-form-label">图片类型</label>
     <div class="layui-input-block">
-        <input type="radio" name="type" value="1" title="幻灯片" checked>
-        <input type="radio" name="type" value="2" title="左边悬浮图">
-        <input type="radio" name="type" value="3" title="wap端幻灯片">
+        <input type="radio" name="type" value="1" title="幻灯片" @if($banner->type ==1) checked @endif>
+        <input type="radio" name="type" value="2" title="左边悬浮图" @if($banner->type ==2) checked @endif>
+        <input type="radio" name="type" value="3" title="wap端幻灯片"@if($banner->type ==3) checked @endif>
     </div>
 </div>
 <div class="layui-form-item">
